@@ -8,7 +8,7 @@ var jsonParser = bodyParser.json()
  
 // create application/x-www-form-urlencoded parser
 //var urlencodedParser = bodyParser.urlencoded({ extended: false })
-const port = 3003
+const port = 3000
 const auth = (req,res,  next) => {
 	const headers = req.headers;
 	if (headers['x-dsn']!='abcd-abcd')
@@ -19,7 +19,7 @@ const auth = (req,res,  next) => {
 	next();
 }
 app.get('/',  (req, res) => {
-	res.send('Hello World brother jenkins 2!');
+	res.send('Hello World!');
   })
 app.get('/testgetrequest',  (req, res) => {
 	res.send('Hello World!');
